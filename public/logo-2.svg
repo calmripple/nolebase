@@ -1,0 +1,42 @@
+<svg width="320" height="320" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320">
+  <!-- 背景圆形（可选浅灰渐变，增加层次感） -->
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- 背景圆 -->
+  <circle cx="160" cy="160" r="160" fill="url(#bgGrad)" />
+
+  <!-- 中心存在之环（象征 Being / 存在） -->
+  <circle cx="160" cy="160" r="50" fill="none" stroke="#2c3e50" stroke-width="3" />
+
+  <!-- 知的象征：从中心向外辐射的弧线 / 光芒 / 思维波（Knowing） -->
+  <g stroke="#3498db" stroke-width="2" fill="none" opacity="0.8">
+    <!-- 弧线1：右上方向 -->
+    <path d="M 160 110 Q 200 100 210 130" />
+    <!-- 弧线2：右方向 -->
+    <path d="M 200 160 Q 225 160 230 180" />
+    <!-- 弧线3：右下方向 -->
+    <path d="M 160 210 Q 200 220 210 190" />
+    <!-- 弧线4：左上方向 -->
+    <path d="M 160 110 Q 120 100 110 130" />
+    <!-- 弧线5：左方向 -->
+    <path d="M 120 160 Q 95 160 90 180" />
+    <!-- 弧线6：左下方向 -->
+    <path d="M 160 210 Q 120 220 110 190" />
+    <!-- 中上方光芒 -->
+    <path d="M 160 110 L 160 95" />
+    <!-- 中下方光芒 -->
+    <path d="M 160 210 L 160 225" />
+    <!-- 中左光芒 -->
+    <path d="M 110 160 L 95 160" />
+    <!-- 中右光芒 -->
+    <path d="M 210 160 L 225 160" />
+  </g>
+
+  <!-- 中心小圆点（象征核心 / 源点） -->
+  <circle cx="160" cy="160" r="4" fill="#2c3e50" />
+</svg>
