@@ -114,7 +114,7 @@ If you are not familiar with using tools like the command line or [Git](https://
 If you're comfortable with the command line and [Git](https://git-scm.com/), you can clone the project repository into a directory named `nolebase` using the following command:
 
 ```shell
-git clone https://github.com/nolebase/nolebase
+git clone https://github.com/calmripple/nolebase
 ```
 
 #### For Windows User
@@ -122,7 +122,7 @@ git clone https://github.com/nolebase/nolebase
 > [!IMPORTANT]
 > If you are using [Git for Windows](https://gitforwindows.org/), you may see an error like this when executing the command mentioned above:
 > ```PowerShell
-> PS D:\> git clone https://github.com/nolebase/nolebase
+> PS D:\> git clone https://github.com/calmripple/nolebase
 > ...
 > error: invalid path 'x: xxx.md'
 > fatal: unable to checkout working tree

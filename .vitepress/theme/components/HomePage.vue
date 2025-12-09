@@ -36,7 +36,7 @@ import { creators, siteName } from '../../../metadata'
               💕 感谢所有贡献者！
             </h2>
 
-            <a href="https://github.com/nolebase/nolebase/graphs/contributors">
+            <a href="https://github.com/calmripple/nolebase/graphs/contributors">
               <img src="https://contrib.rocks/image?repo=nolebase/nolebase">
             </a>
           </div>

@@ -16,5 +16,5 @@ tags:
 
 是我和小音早在 2021 年 9 月 2 日首次提交[^2]知识库文档文件到 GitHub 之前就在尝试建设的开源知识库项目。
 
-[^1]:  来自 [nolebase/nolebase](https://github.com/nolebase/nolebase) 仓库简介
-[^2]: 首次提交的时间是 2021 年 9 月 2 日夜间 22 点 22 分：[first commit · nolebase/nolebase@983741f](https://github.com/nolebase/nolebase/commit/983741fd5a6e9e5507bc4ca81a97ffc16dd6be7f)
+[^1]:  来自 [nolebase/nolebase](https://github.com/calmripple/nolebase) 仓库简介
+[^2]: 首次提交的时间是 2021 年 9 月 2 日夜间 22 点 22 分：[first commit · nolebase/nolebase@983741f](https://github.com/calmripple/nolebase/commit/983741fd5a6e9e5507bc4ca81a97ffc16dd6be7f)

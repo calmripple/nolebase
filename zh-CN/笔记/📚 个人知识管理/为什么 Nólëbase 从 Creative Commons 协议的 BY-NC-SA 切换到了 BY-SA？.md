@@ -2,11 +2,11 @@
 
 ## 一直以来我们都在用 CC BY-NC-SA 协议
 
-其实一直以来如果直接前往 [nolebase/nolebase](https://github.com/nolebase/nolebase) 的仓库的话，可以看到右侧的开源协议是会提示 Unknown 的：
+其实一直以来如果直接前往 [nolebase/nolebase](https://github.com/calmripple/nolebase) 的仓库的话，可以看到右侧的开源协议是会提示 Unknown 的：
 
 ![](./assets/why-nolebase-moved-to-cc-by-sa-from-cc-by-nc-sa-screenshot-5.png)
 
-如果你阅读过我们的 README 文件，或者直接前往过 [Nolebase](https://nolebase.ayaka.io) 阅读笔记的话，会看到我们自从 2022 年开源 Nolebase 以来，就一直是在使用的 [Creative Commons 的 BY-NC-SA 协议](https://github.com/nolebase/nolebase/blob/0545bce5bf9d012442e4c97f05cece2112768af7/LICENSE-CC-BY-NC-SA)。
+如果你阅读过我们的 README 文件，或者直接前往过 [Nolebase](https://nolebase.ayaka.io) 阅读笔记的话，会看到我们自从 2022 年开源 Nolebase 以来，就一直是在使用的 [Creative Commons 的 BY-NC-SA 协议](https://github.com/calmripple/nolebase/blob/0545bce5bf9d012442e4c97f05cece2112768af7/LICENSE-CC-BY-NC-SA)。
 
 > Creative Commons BY-NC-SA 的含义
 >
@@ -82,7 +82,7 @@
 
 > CC NC（非商业性使用）对商业领域利用的差别待遇与开源精神冲突。
 
-所以如果我们的知识库 [nolebase/nolebase](https://github.com/nolebase/nolebase) 要继续在 GitHub 上开源，并且在内容上希望获得开源社区的贡献和遵守 Open Definition 的支持的话，在遵守开源数据，开源知识，以及开源社区的事实标准 Open Definition 和开源精神的前提下，我们理应跟随社区和对应的协议规范，通过切换到 CC BY-SA，而不是使用一个有悖于社区和支持的 CC BY-NC-SA 协议。
+所以如果我们的知识库 [nolebase/nolebase](https://github.com/calmripple/nolebase) 要继续在 GitHub 上开源，并且在内容上希望获得开源社区的贡献和遵守 Open Definition 的支持的话，在遵守开源数据，开源知识，以及开源社区的事实标准 Open Definition 和开源精神的前提下，我们理应跟随社区和对应的协议规范，通过切换到 CC BY-SA，而不是使用一个有悖于社区和支持的 CC BY-NC-SA 协议。
 
 这就是为什么我们要切换到 BY-SA 的原因。
 

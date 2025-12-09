@@ -10,7 +10,7 @@ export const siteDescription = '记录回忆，知识和畅想的地方'
 export const include = ['笔记', '生活']
 
 /** Repo */
-export const githubRepoLink = 'https://github.com/nolebase/nolebase'
+export const githubRepoLink = 'https://github.com/calmripple/nolebase'
 /** Discord */
 export const discordLink = 'https://discord.gg/XuNFDcDZGj'
 
@@ -22,7 +22,7 @@ export const targetDomain = `https://${plainTargetDomain}`
 /** 创作者 */
 export const creators: Creator[] = [
   {
-    name: '存在',
+    name: 'Ontology',
     avatar: '',
     username: 'Ontology',
     title: '存在与知 原始创作者',
@@ -35,7 +35,7 @@ export const creators: Creator[] = [
     emailAliases: ['neko@ayaka.moe'],
   },
   {
-    name: '认知',
+    name: 'Epistemology',
     avatar: '',
     username: 'Epistemology',
     title: '存在与知 原始创作者',

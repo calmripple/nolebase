@@ -22,7 +22,7 @@ tags:
 
 ![](./assets/how-to-include-markdown-in-stats-for-github-screenshot-2.png)
 
-上图是 存在与知 的主要仓库 [nolebase/nolebase](https://github.com/nolebase/nolebase) 的代码占比统计信息，可以看到在调整配置之后，存在与知 中的巨量 Markdown 文件就能被统计到占比中了。
+上图是 存在与知 的主要仓库 [nolebase/nolebase](https://github.com/calmripple/nolebase) 的代码占比统计信息，可以看到在调整配置之后，存在与知 中的巨量 Markdown 文件就能被统计到占比中了。
 
 ## 如何实现
 
