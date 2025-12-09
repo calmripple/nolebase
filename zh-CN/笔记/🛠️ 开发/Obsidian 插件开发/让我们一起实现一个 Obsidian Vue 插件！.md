@@ -9,15 +9,15 @@ tags:
 ---
 # 让我们一起实现一个 Obsidian Vue 插件！
 
-## 关于 [Nólëbase](https://nolebase.ayaka.io) 和 [Nólëbase 集成](https://nolebase-integrations.ayaka.io/pages/zh-CN/)
+## 关于 [存在与知](https://nolebase.ayaka.io) 和 [存在与知 集成](https://nolebase-integrations.ayaka.io/pages/zh-CN/)
 
-[Nólëbase](https://nolebase.ayaka.io) 是我和 @LittleSound 在 2021 年开始用 [[Obsidian]] + Git 管理的知识库，在 2022 年转换成了可以部署和分享的 [[VitePress]] 站点，并且更名为 [Nólëbase](https://nolebase.ayaka.io)。
+[存在与知](https://nolebase.ayaka.io) 是我和 @Epistemology 在 2021 年开始用 [[Obsidian]] + Git 管理的知识库，在 2022 年转换成了可以部署和分享的 [[VitePress]] 站点，并且更名为 [存在与知](https://nolebase.ayaka.io)。
 
-接下来，我去年的时候发起了 [Nólëbase 集成](https://nolebase-integrations.ayaka.io/pages/zh-CN/) 这个项目，目的是为了抹平 [[Obsidian]] 到类似 Notion 这样的**可分享**知识库之间的界限（中间也写过一些小的想法，你可以在 [[Obsidian、VitePress 以及 Nólëbase 所处的困境]] 中阅读到一部分），给 Obsidian 和 VitePress 带来统一性，然后也许可以推广到 [Nuxt Content](https://content.nuxt.com/)，[Rspress](https://rspress.dev/)，[iles](https://iles.pages.dev/guide/introduction) 还有 [Logseq](https://logseq.com/) 上。
+接下来，我去年的时候发起了 [存在与知 集成](https://nolebase-integrations.ayaka.io/pages/zh-CN/) 这个项目，目的是为了抹平 [[Obsidian]] 到类似 Notion 这样的**可分享**知识库之间的界限（中间也写过一些小的想法，你可以在 [[Obsidian、VitePress 以及 存在与知 所处的困境]] 中阅读到一部分），给 Obsidian 和 VitePress 带来统一性，然后也许可以推广到 [Nuxt Content](https://content.nuxt.com/)，[Rspress](https://rspress.dev/)，[iles](https://iles.pages.dev/guide/introduction) 还有 [Logseq](https://logseq.com/) 上。
 
-在 [Nólëbase 集成](https://nolebase-integrations.ayaka.io/pages/zh-CN/) 中，我把很多 [[Obsidian]] 特有的能力都用一种特别的方式集成到了 [[VitePress]] 里，并且直接从我们 2021 年就开始的 [Nólëbase | 记录回忆，知识和畅想的地方](https://nolebase.ayaka.io/) 抽离很多可复用的组件作为独立的插件供大家安装，在一年后 [Nólëbase 集成](https://nolebase-integrations.ayaka.io/pages/zh-CN/) 的不同的子插件已经被包括 Vue 社区项目之一 [vue-macros/vue-macros](https://github.com/vue-macros/vue-macros) 、Linux 社区、俄罗斯社区、Minecraft 社区等在内大大小小的 45 个不同的仓库使用。
+在 [存在与知 集成](https://nolebase-integrations.ayaka.io/pages/zh-CN/) 中，我把很多 [[Obsidian]] 特有的能力都用一种特别的方式集成到了 [[VitePress]] 里，并且直接从我们 2021 年就开始的 [存在与知 | 记录回忆，知识和畅想的地方](https://nolebase.ayaka.io/) 抽离很多可复用的组件作为独立的插件供大家安装，在一年后 [存在与知 集成](https://nolebase-integrations.ayaka.io/pages/zh-CN/) 的不同的子插件已经被包括 Vue 社区项目之一 [vue-macros/vue-macros](https://github.com/vue-macros/vue-macros) 、Linux 社区、俄罗斯社区、Minecraft 社区等在内大大小小的 45 个不同的仓库使用。
 
-自从 6 月份开始集成 Plausible.io 获取页面访问计数以来，[Nólëbase](https://nolebase.ayaka.io) 和 [Nólëbase 集成](https://nolebase-integrations.ayaka.io/pages/zh-CN/) 也各自迎来了创纪录的 3w 页面浏览量，每天都在带来更多的用户，真的非常感谢大家！
+自从 6 月份开始集成 Plausible.io 获取页面访问计数以来，[存在与知](https://nolebase.ayaka.io) 和 [存在与知 集成](https://nolebase-integrations.ayaka.io/pages/zh-CN/) 也各自迎来了创纪录的 3w 页面浏览量，每天都在带来更多的用户，真的非常感谢大家！
 
 ## 动机
 
@@ -27,7 +27,7 @@ tags:
 
 在 Obsidian 官方的文档中自己就提出过如何在 Obsidian 中集成和实现 React 和 Svelte（虽然是应用在设置界面上的表单控制和表单校验的），那 Vue 应该也有可能在 Obsidian 的正文视图中直接用到才对。
 
-所以就想做这么个插件来继续 [Nólëbase 集成](https://nolebase-integrations.ayaka.io/pages/zh-CN/) 的哲学：抹平界限。
+所以就想做这么个插件来继续 [存在与知 集成](https://nolebase-integrations.ayaka.io/pages/zh-CN/) 的哲学：抹平界限。
 
 ## 明确需求
 
@@ -63,7 +63,7 @@ tags:
 既然是可以获取到纯文本的，我们可以用 `unified.js` 的生态来进行操作，并且保留 AST 结构和相对于原始文件的位置信息（类似于 Source Map 的工作方式）。
 ### 如何提取和找到 HTML 的部分
 
-既然是 `unified.js` 生态，我们在我们前不久发布的基于大模型开发前端的工具 [Guii.app](https://guii.app) 和 [Nólëbase 集成](https://nolebase-integrations.ayaka.io/pages/zh-CN/) 中都已经大量使用过了，那么接下来安装我们觉得可能会需要的插件就好：
+既然是 `unified.js` 生态，我们在我们前不久发布的基于大模型开发前端的工具 [Guii.app](https://guii.app) 和 [存在与知 集成](https://nolebase-integrations.ayaka.io/pages/zh-CN/) 中都已经大量使用过了，那么接下来安装我们觉得可能会需要的插件就好：
 
 ```shell
 ni unified remark-parse remark-rehype rehype-raw unist-util-remove hast-util-to-html -D
@@ -89,9 +89,9 @@ class VueViewPlugin implements PluginValue {
   // other code...
   async init() {
     await this.waitForViewDOM()
-    
+
 	// other code...
-	
+
     const parsedMarkdownAst = await unified() // [!code hl]
       .use(RemarkParse) // [!code hl]
       .use(() => tree => remove(tree, 'heading')) // [!code hl]
@@ -137,7 +137,7 @@ class VueViewPlugin implements PluginValue {
   // other code...
   async init() {
     await this.waitForViewDOM()
-    
+
 	// other code...
 
     const transformedHast = await unified()
@@ -219,7 +219,7 @@ class VueViewPlugin implements PluginValue {
         firstCode = code // [!code ++]
       } // [!code ++]
     }
-    
+
 	// Create a Blob from the render function text // [!code ++]
     const blob = new Blob([firstCode], { type: 'application/javascript' }) // [!code ++]
     const url = URL.createObjectURL(blob) // [!code ++]
@@ -260,7 +260,7 @@ class VueViewPlugin implements PluginValue {
   // other code...
   async init() {
     // other code...
-  
+
     const existingImportMapScriptEl = this.view.dom.querySelector('#obsidian-plugin-vue-import-map') // [!code ++]
     if (existingImportMapScriptEl) // [!code ++]
       this.importMapScriptEl = existingImportMapScriptEl as HTMLScriptElement // [!code ++]
@@ -301,7 +301,7 @@ class VueViewPlugin implements PluginValue {
         firstCode = code
       }
     }
-    
+
 	const someComponentScriptEl = this.view.dom.createEl('script') // [!code ++]
     someComponentScriptEl.type = 'module' // [!code ++]
     someComponentScriptEl.innerHTML = `const firstCode = \`${firstCode}\` // [!code ++]
@@ -377,7 +377,7 @@ const importUnocssRegex = /import\s(.*?)\sfrom\s*(['"])unocss\2/g
 const importObjectRegex = /import\s*(\{[\s\S]*?\})\s*from\s*(['"])([\w@/-]+)\2/g
 const importDefaultRegex = /import\s(.*?)\sfrom\s*(['"])([\w@/-]+)\2/g
 const exportDefaultRegex = /export default /
-const importRegex = /\bimport\s*\(/g  
+const importRegex = /\bimport\s*\(/g
 // [!code ++]
 // New regex to handle `as` to `:` transformation // [!code ++]
 const importAsRegex = /(\w+)\s+as\s+(\w+)/g // [!code ++]
@@ -420,7 +420,7 @@ class VueViewPlugin implements PluginValue {
         firstCode = code
       }
     }
-    
+
 	const res = await evaluateAnyModule<() => void>(code) // [!code ++]
 	console.log(res) // [!code ++]
   }
@@ -494,7 +494,7 @@ class VueViewPlugin implements PluginValue {
   // other code...
   async init() {
     await this.waitForViewDOM()
-  
+
     const anyGlobalThis = globalThis as any // [!code ++]
     anyGlobalThis.Vue = Vue // [!code ++]
   }
@@ -522,7 +522,7 @@ class VueViewPlugin implements PluginValue {
 
     for (const node of transformedHast.children) {
       // compile...
-      
+
 	  if (index === 1) // [!code --]
         firstCode = code // [!code --]
       } // [!code --]
@@ -533,7 +533,7 @@ class VueViewPlugin implements PluginValue {
 
       renderFunctions.push(res) // [!code ++]
     }
-    
+
 	const res = await evaluateAnyModule<() => void>(code) // [!code --]
 	console.log(res) // [!code --]
 
@@ -575,13 +575,13 @@ class VueViewPlugin implements Plugin {
   async init() {
 	await this.waitForViewDOM()
 	// other code...
-	
+
 	this.vueInstance?.unmount()
 
 	const parsedHtmlBlocks = this.parseHtmlBlocks(this.view)
 	const renderers = this.compileTemplates(parsedHtmlBlocks)
 	const calculatedChildDoms = this.calculateChildDom(parsedHtmlBlocks, renderers)
-  
+
     const comp = defineComponent({
       setup() {
         return () => calculatedChildDoms.map((item) => h('Teleport', { to: `${item.class}` }, item.render))
@@ -678,7 +678,7 @@ if (
 
 但这只是解答了我们部分的疑惑，因为 `__VUE_HMR_RUNTIME__` 是一个包含了函数方法的对象，这个对象不在 `unplugin-vue` 中实现，而是在别的地方实现的。
 
-这里要感谢小音 @LittleSound，她带我直接去搜索了 Vue 的源代码，然后找到了这个代码片段：[Vue 的源代码里](https://github.com/vuejs/core/blob/0ac0f2e338f6f8f0bea7237db539c68bfafb88ae/packages/runtime-core/src/hmr.ts#L30-L36)，它长这样：
+这里要感谢小音 @Epistemology，她带我直接去搜索了 Vue 的源代码，然后找到了这个代码片段：[Vue 的源代码里](https://github.com/vuejs/core/blob/0ac0f2e338f6f8f0bea7237db539c68bfafb88ae/packages/runtime-core/src/hmr.ts#L30-L36)，它长这样：
 
 ```typescript
 // Expose the HMR runtime on the global object

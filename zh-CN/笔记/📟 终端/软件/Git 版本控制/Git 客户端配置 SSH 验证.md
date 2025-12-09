@@ -37,7 +37,7 @@ SSH 相关的密钥、文件，都应该放到 `$HOME/.ssh` 目录下，也就�
 4. `authorized_keys`  - 远程连接 SSH 时验证的公钥文件，每行一个公钥，**发起请求用的 SSH 客户端是不会需要配置的**。
 5. `known_hosts` 和 `known_hosts.old` 是存储已知的远程主机公钥和备份
 
-`$HOME`  在 Windows 的路径是 `C:\Users\你的用户名\` 
+`$HOME`  在 Windows 的路径是 `C:\Users\你的用户名\`
 
 >
 > [!NOTE]
@@ -60,7 +60,7 @@ SSH 相关的密钥、文件，都应该放到 `$HOME/.ssh` 目录下，也就�
 > ⚠️ 注意：Windows需要关闭系统的OpenSSH Authentication Agent服务
 >
 > 手动操作:
-> 
+>
 > 在 `OpenSSH Authentication Agent` 服务中，先「停止」然后在启动类型里选择「禁用」，完成后点击「应用」
 >
 > CMD 操作:
@@ -71,7 +71,7 @@ SSH 相关的密钥、文件，都应该放到 `$HOME/.ssh` 目录下，也就�
 > ```
 >
 >  `STATE` 显示 `STOP_PENDING` 即正常停止中
-> 
+>
 >  `start=` 后面一定要加空格再输入 `disabled`
 
 
@@ -218,7 +218,7 @@ Host <连接时在输入 ssh 命令时引用的域名别名>
     IdentityFile <公钥所在的路径>
 ```
 
-1. **Host**：域，等同于别名，比如我们可以在这个字段中填写 `gh`，下面的 `HostName` 填写 `github.com`，则连接的时候我们输入并执行 `ssh gh` 就可以自动指向到 `github.com`，这个地方选择自己喜欢的方式命名即可，比如我喜欢 `<用户名>.git` 这样（`nekomeowww.git`），这样多用户的时候可以方便配置
+1. **Host**：域，等同于别名，比如我们可以在这个字段中填写 `gh`，下面的 `HostName` 填写 `github.com`，则连接的时候我们输入并执行 `ssh gh` 就可以自动指向到 `github.com`，这个地方选择自己喜欢的方式命名即可，比如我喜欢 `<用户名>.git` 这样（`Ontology.git`），这样多用户的时候可以方便配置
 2. **HostName**：域名，需要连接的远程服务器域名或是 IP 地址，GitHub 的 SSH 需要填写 github.com，GitLab 则填写 gitlab.com，如果是自建的 GitLab 实例，则需要填写对应的实例域名或是 IP
 3. **User**：用户，连接时使用的用户，对于 GitHub SSH 而言，默认填写 git，不用写为自己的用户名，服务器那边会通过你的公钥自动判断的
 4. **IdentityFile**：身份文件，一般是 RSA 密钥的私钥文件，格式不限，只要是复合 OpenSSH 规范的即可
@@ -257,11 +257,11 @@ Host gitlab.com
 当然你也可以参考我的配置：
 
 ```ssh-config
-Host nekomeowww.git
+Host Ontology.git
     HostName ssh.github.com
     User git
     Port 443
-    IdentityFile ~/.ssh/nekomeowww_rsa
+    IdentityFile ~/.ssh/Ontology_rsa
 ```
 
 ### 测试 GitHub 连接
@@ -307,8 +307,8 @@ ssh -T github.com
 正常情况下的测试结果：
 
 ```shell
-ssh -T nekomeowww.git
-Hi nekomeowww! You've successfully authenticated, but GitHub does not provide shell access.
+ssh -T Ontology.git
+Hi Ontology! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
 出现这样的字样就说明配置完成了，可以在 Git 命令行工具中使用了。
@@ -322,17 +322,17 @@ Host github.com
   User git
   HostName ssh.github.com
   Port 443
-  IdentityFile ~/.ssh/nekomeowww_2023.pub
+  IdentityFile ~/.ssh/Ontology_2023.pub
 ```
 
 Git 克隆命令：
 
 ```shell
-git clone nekomeowww.git:nekomeowww/repo.git
+git clone Ontology.git:Ontology/repo.git
 ```
 
 为老的仓库设定使用 SSH 连接：
 
 ```shell
-git remote set-url origin nekomeowww.git:nekomeowww/repo.git
+git remote set-url origin Ontology.git:Ontology/repo.git
 ```

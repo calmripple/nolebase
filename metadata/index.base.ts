@@ -10,7 +10,7 @@ export const siteDescription = '记录回忆，知识和畅想的地方'
 export const include = ['笔记', '生活']
 
 /** Repo */
-export const githubRepoLink = 'https://github.com/nolebase/nolebase'
+export const githubRepoLink = 'https://github.com/calmripple/nolebase'
 /** Discord */
 export const discordLink = 'https://discord.gg/XuNFDcDZGj'
 
@@ -33,19 +33,6 @@ export const creators: Creator[] = [
     ],
     nameAliases: ['Ontology', '绚香猫', '存在', 'Neko Ayaka', 'Ayaka Neko'],
     emailAliases: ['neko@ayaka.moe'],
-  },
-  {
-    name: '认知',
-    avatar: '',
-    username: 'Epistemology',
-    title: '存在与知 原始创作者',
-    desc: '开源开发者，专注于前端，以及前端相关工具库和工具链开发',
-    links: [
-      { type: 'github', icon: 'github', link: 'https://github.com/Epistemology' },
-      { type: 'twitter', icon: 'twitter', link: 'https://twitter.com/OikawaRizumu' },
-    ],
-    nameAliases: ['Epistemology', 'Knowing', '认知', 'Rizumu Oikawa', 'Rizumu Ayaka', 'Ayaka Rizumu', 'Rizumu'],
-    emailAliases: ['rizumu@ayaka.moe', 'rizumu@oqo.moe'],
   },
 ].map<Creator>((c) => {
   c.avatar = c.avatar || getAvatarUrlByGithubName(c.username)
