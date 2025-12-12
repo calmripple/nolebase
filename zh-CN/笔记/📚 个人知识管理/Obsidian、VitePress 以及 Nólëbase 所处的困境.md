@@ -8,7 +8,7 @@ tags:
   - 个人知识管理/知识库
 status: 尚未完成
 ---
-# 在与知 和我们所使用的 Obsidian 以及 VitePress 所处的困境
+# 在与知（beknowing） 和我们所使用的 Obsidian 以及 VitePress 所处的困境
 
 > [!WARNING]
 > ⚠️ 该文档尚未完成，仍在编写中...

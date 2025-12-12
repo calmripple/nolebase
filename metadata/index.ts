@@ -22,26 +22,26 @@ export const targetDomain = `https://${plainTargetDomain}`
 /** 创作者 */
 export const creators: Creator[] = [
   {
-    name: 'Ontology',
+    name: 'beingknowing',
     avatar: '',
-    username: 'Ontology',
+    username: 'beingknowing',
     title: '在与知 原始创作者',
     desc: '开发者，专注于基础设施维护，数据分析，后端、DevOps 开发',
     links: [
-      { type: 'github', icon: 'github', link: 'https://github.com/Ontology' },
+      { type: 'github', icon: 'github', link: 'https://github.com/beingknowing' },
       { type: 'twitter', icon: 'twitter', link: 'https://twitter.com/ayakaneko' },
     ],
-    nameAliases: ['Ontology', '绚香猫', '存在', 'Neko Ayaka', 'Ayaka Neko'],
+    nameAliases: ['Ontology', 'beingknowing', '存在', 'being', 'သိထားပါတယ်'],
     emailAliases: ['neko@ayaka.moe'],
   },
   {
-    name: 'Epistemology',
+    name: 'beknowing',
     avatar: '',
-    username: 'Epistemology',
+    username: 'beknowing',
     title: '在与知 原始创作者',
     desc: '开源开发者，专注于前端，以及前端相关工具库和工具链开发',
     links: [
-      { type: 'github', icon: 'github', link: 'https://github.com/Epistemology' },
+      { type: 'github', icon: 'github', link: 'https://github.com/beknowing' },
       { type: 'twitter', icon: 'twitter', link: 'https://twitter.com/OikawaRizumu' },
     ],
     nameAliases: ['Epistemology', 'Knowing', '认知', 'Rizumu Oikawa', 'Rizumu Ayaka', 'Ayaka Rizumu', 'Rizumu'],
