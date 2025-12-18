@@ -1,0 +1,90 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: DeployPagesViaGithubActions
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches:
+      - main
+      - master
+
+  # pull_request:
+  #   branches: [main, master]
+  #   types: [closed]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: write
+env:
+  MAIN_BRANCH: ${{ vars.MAIN_BRANCH || github.event.repository.default_branch }} # 主分支名称
+  PREVIEW_REPO: ${{ vars.PREVIEW_REPO || 'ripplejourney/preview' }}
+  PREVIEW_BASE_URL: ${{ vars.PREVIEW_BASE_URL || 'https://ripplejourney.github.io/preview' }}
+  PRODUCT_BASE_URL: ${{ vars.PRODUCT_BASE_URL || 'https://calmripple.github.io' }}
+  REVIEWERS: ${{ vars.REVIEWERS || 'calmripple' }}
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+        with:
+          # 默认只拉取分支最近一次的 commit，可能会导致一些文章的 GitInfo 变量无法获取，设为 0 代表拉取所有分支所有提交
+          fetch-depth: 0
+      - name: Git Configuration
+        # 2、配置 Git
+        run: |
+          git config --global core.quotePath false
+          git config --global core.autocrlf false
+          git config --global core.safecrlf true
+          git config --global core.ignorecase false
+
+      - name: Setup PNPM
+        # 3、安装 PNPM
+        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4
+        with:
+          version: 9
+
+      - name: Setup Node
+        # 4、安装 Node 环境
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 21
+          registry-url: https://registry.npmjs.org
+          cache: pnpm
+
+      - name: Install Dependencies & Build
+        env:
+          RELATIVE_URL: ''
+          BASE_URL: ${{ env.PRODUCT_BASE_URL }}
+        run: |
+          pnpm install --no-frozen-lockfile
+          pnpm buildlib
+          pnpm build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
+        with:
+          # Upload entire repository
+          path: .vitepress/dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
