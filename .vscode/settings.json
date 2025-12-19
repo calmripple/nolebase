@@ -76,5 +76,13 @@
   "github.copilot.renameSuggestions.triggerAutomatically": false,
   "github.copilot.nextEditSuggestions.fixes": false,
   "github.copilot.nextEditSuggestions.enabled": true,
-  "github.copilot.nextEditSuggestions.allowWhitespaceOnlyChanges": true
+  "github.copilot.nextEditSuggestions.allowWhitespaceOnlyChanges": true,
+  "svg.completion.emmet": true,
+  "svg.completion.showAdvanced": true,
+  "svg.completion.showDeprecated": true,
+  "svg.preview.autoShow": true,
+  "svgPreview.autoOpen": false,
+  "svg.preview.showCrossLine": true,
+  "svg.preview.showRuler": true,
+  "svg.preview.translateExternalAddress": true
 }
