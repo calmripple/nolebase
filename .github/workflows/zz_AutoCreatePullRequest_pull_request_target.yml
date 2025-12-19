@@ -40,9 +40,9 @@ on:
 permissions: write-all
 env:
   TARGET_BRANCH: ${{ vars.TARGET_BRANCH || github.event.repository.default_branch }} # 主分支名称
-  PREVIEW_REPO: ${{ vars.PREVIEW_REPO || 'ripplejourney/preview' }}
-  PREVIEW_BASE_URL: ${{ vars.PREVIEW_BASE_URL || 'https://ripplejourney.github.io/preview' }}
-  PRODUCT_BASE_URL: ${{ vars.PRODUCT_BASE_URL || 'https://calmripple.github.io' }}
+  PREVIEW_REPO: ${{ vars.PREVIEW_REPO || 'ripplejourney/ripplejourney.github.io' }}
+  PREVIEW_BASE_URL: ${{ vars.PREVIEW_BASE_URL || 'https://preview.dmsrs.org' }}
+  PRODUCT_BASE_URL: ${{ vars.PRODUCT_BASE_URL || 'https://www.dmsrs.org' }}
   REVIEWERS: ${{ vars.REVIEWERS || 'calmripple' }}
   IS_DEBUG: ${{ vars.IS_DEBUG || 'false' }}
 concurrency:
@@ -212,8 +212,8 @@ jobs:
           #     preview_branch: gh-pages
 
           #     # The name of the workflow file that contains the comment workflow in the preview repo
-          #     # Default: preview.yml
-          #     preview_workflow_file_name: preview.yml
+          # Default: preview.yml
+          preview_workflow_file_name: preview.yml
 
   merge:
     needs: [preview, check]
