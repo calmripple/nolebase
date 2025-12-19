@@ -40,7 +40,7 @@ on:
 permissions: write-all
 env:
   TARGET_BRANCH: ${{ vars.TARGET_BRANCH || github.event.repository.default_branch }} # 主分支名称
-  PREVIEW_REPO: ${{ vars.PREVIEW_REPO || 'ripplejourney/preview' }}
+  PREVIEW_REPO: ${{ vars.PREVIEW_REPO || 'ripplejourney/ripplejourney.github.io' }}
   PREVIEW_BASE_URL: ${{ vars.PREVIEW_BASE_URL || 'https://preview.dmsrs.org' }}
   PRODUCT_BASE_URL: ${{ vars.PRODUCT_BASE_URL || 'https://www.dmsrs.org' }}
   REVIEWERS: ${{ vars.REVIEWERS || 'calmripple' }}
