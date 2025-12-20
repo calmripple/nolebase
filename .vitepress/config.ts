@@ -1,17 +1,20 @@
+import process from 'node:process'
 import { presetMarkdownIt } from '@nolebase/integrations/vitepress/markdown-it'
 import { transformHeadMeta } from '@nolebase/vitepress-plugin-meta'
 import { calculateSidebar } from '@nolebase/vitepress-plugin-sidebar'
 // import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-image/vitepress'
 import MarkdownItFootnote from 'markdown-it-footnote'
 import MarkdownItMathjax3 from 'markdown-it-mathjax3'
-import { defineConfig } from 'vitepress'
 
+import { defineConfig } from 'vitepress'
 import { discordLink, githubRepoLink, siteDescription, siteName } from '../metadata'
 import head from './head'
 
 const nolebase = presetMarkdownIt()
+const relativeUrl = process.env.RELATIVE_URL ?? ''
 
 export default defineConfig({
+  base: relativeUrl,
   vue: {
     template: {
       transformAssetUrls: {
