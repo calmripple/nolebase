@@ -1,6 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+  <rect x="0" y="0" width="200" height="200" stroke="#666" stroke-width="0" fill="none" />
+
+  <style>
+    .spin {
+      animation: spin 10s linear infinite;
+      transform-origin: 100px 100px;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+
   <!-- <g transform="rotate(90 100 100)"> -->
-  <g>
+  <g class="spin">
     <!-- 外圈 -->
     <circle cx="100" cy="100" r="98" fill="none" />
 
@@ -32,20 +45,20 @@
 
     <circle id="c1" r="15" style="stroke:none;" />
     <mask id="mask1" width="100%" height="100%" x="0" y="0">
-      <use href="#c1" x="100" y="50" fill="#fff" />
+      <use class="spin" href="#c1" x="100" y="50" fill="#fff" />
     </mask>
     <mask id="mask2" width="100%" height="100%" x="0" y="0">
-      <use href="#c1" x="100" y="150" fill="#fff" />
+      <use class="spin" href="#c1" x="100" y="150" fill="#fff" />
     </mask>
   </defs>
 
   <use href="#zhi" fill="#000000" />
-  <use href="#c1" fill="#000000" x="100" y="50" />
+  <use class="spin" href="#c1" fill="#000000" x="100" y="50" />
   <use href="#zhi" fill="#e5e7eb" mask="url(#mask1)" />
 
 
   <use href="#zai" fill="#e5e7eb" />
-  <use href="#c1" fill="#e5e7eb" x="100" y="150" />
+  <use class="spin" href="#c1" fill="#e5e7eb" x="100" y="150" />
   <use href="#zai" fill="#000000" mask="url(#mask2)" />
 
   <!-- <circle cx="100" cy="100" r="100" fill="#fff" fill-opacity="0.2" stroke="#666" stroke-width="0"  /> -->
